@@ -15,7 +15,7 @@ public class MaxSubListSum {
 //        }
 //        long t2 = System.currentTimeMillis();//3300ms
 //        System.out.println("1: " + (t1 - t0) + "ms\n2: " + (t2 - t1) + "ms");
-//        System.out.println(method1(arr));
+        System.out.println(method1(arr));
         System.out.println(method2(arr));
     }
 
