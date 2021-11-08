@@ -1,6 +1,4 @@
-package com.cevier.algorithm.LlinearSearch;
-
-import java.util.Objects;
+package com.cevier.algorithm.LinearSearch;
 
 public class AnObject {
 

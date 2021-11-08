@@ -1,4 +1,4 @@
-package com.cevier.algorithm.LlinearSearch;
+package com.cevier.algorithm.LinearSearch;
 
 import org.junit.jupiter.api.Test;
 
