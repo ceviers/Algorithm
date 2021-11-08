@@ -1,4 +1,4 @@
-package MaxSumOfSubList;
+package com.cevier.algorithm.MaxSumOfSubList;
 
 //查找和最大的子数组
 public class MaxSubListSum {

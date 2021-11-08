@@ -1,4 +1,4 @@
-package com.cevier.DoubleLinkedList;
+package com.cevier.algorithm.DoubleLinkedList;
 
 public class DoubleLinkedList {
     private int capacity;
