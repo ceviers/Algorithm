@@ -1,6 +1,6 @@
 package com.cevier.algorithm.InsertionSort;
 
-import com.cevier.algorithm.Tools.AnObject;
+import com.cevier.algorithm.Tools.TestTools;
 import org.junit.jupiter.api.Test;
 
 public class InsertionSort4 {
@@ -20,13 +20,15 @@ public class InsertionSort4 {
 
     @Test
     public void test(){
-//        Integer[] arr = {11,2,8,9,7,6,-4,-8,10};
-        AnObject[] arr = {new AnObject(1, "tom", 25), new AnObject(2, "jerry", 29), new AnObject(4, "tommy", 21)};
+        Integer[] arr = {11,2,8,9,7,6,-4,-8,10};
+//        AnObject[] arr = {new AnObject(1, "tom", 25), new AnObject(2, "jerry", 29), new AnObject(4, "tommy", 21)};
         sort(arr);
-        for (AnObject a : arr) {
+        for (Object a : arr) {
             System.out.print(a + " ");
-
         }
+        System.out.println();
+
+        TestTools.arraySortFunctionTimeTester(this.getClass(),"sort");
     }
 
 }
