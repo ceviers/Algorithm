@@ -1,4 +1,4 @@
-package com.cevier.algorithm.SelectionSort;
+package com.cevier.algorithm.Tools;
 
 public class AnObject implements Comparable<AnObject>{
 

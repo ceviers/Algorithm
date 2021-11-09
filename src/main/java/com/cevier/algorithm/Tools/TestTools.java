@@ -6,7 +6,7 @@ public class TestTools {
     /**
      * 测试方法执行loops次的时间
      * @param c 方法所属类
-     * @param methods 方法数组
+     * @param methods 方法名
      * @param loops 方法执行次数
      */
     public static void timeTester(Class c, int loops, String... methods){
@@ -38,5 +38,4 @@ public class TestTools {
     public static void timeTester(Class c, String... methods){
         timeTester(c, 1000000, methods);
     }
-
 }
