@@ -31,7 +31,7 @@ public class LoopQueue<E> implements Queue<E> {
     @Override
     public E poll() {
         if(getSize() == 0)
-            return null;
+            throw new RuntimeException("the queue is empty");
         E lastElement = queue[tail];
         tail = ++tail % queue.length;
         if(getSize() < queue.length / 4 && queue.length > 2)
@@ -52,13 +52,12 @@ public class LoopQueue<E> implements Queue<E> {
     private void resize(int capacity){
         E[] newQueue = (E[])new Object[capacity];
         int queueSize = getSize();
-        int i = 0;
-        for (; i<= queueSize; i++) {
-            newQueue[i] = poll();
+        for (int i = 0; i <= queueSize; i++) {
+            newQueue[i] = queue[(i + tail) % queue.length];
         }
         queue = newQueue;
         tail = 0;
-        front = i - 1;
+        front = getSize();
     }
 
     @Override
@@ -66,13 +65,12 @@ public class LoopQueue<E> implements Queue<E> {
         StringBuilder s = new StringBuilder();
         s.append("size: " + getSize() + " capacity: " + (queue.length - 1) + "\n[");
         int preFront = front == 0 ? queue.length - 1 : front - 1;
-        for (int i = tail; i != front;) {
+        for (int i = tail; i != front; i = ++i % queue.length) {
             s.append(queue[i]);
             if (i != preFront)
                 s.append(", ");
-           i = ++i % queue.length;
         }
-        s.append("] Head");
+        s.append("] front" + front + " tail" + tail);
         return s.toString();
     }
 }
