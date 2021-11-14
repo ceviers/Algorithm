@@ -1,11 +1,6 @@
 package com.cevier.leetcode.SumOfTwoNumbers;
 
 
-import com.cevier.leetcode.ReverseLinkedList.ReverseLinkedList;
-import org.w3c.dom.NodeList;
-
-import java.util.List;
-
 public class Add {
     public class ListNode {
         int val;

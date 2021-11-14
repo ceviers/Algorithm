@@ -1,4 +1,4 @@
-package com.cevier.leetcode.ReverseLinkedList;
+package com.cevier.leetcode;
 
 public class ReverseLinkedList {
 

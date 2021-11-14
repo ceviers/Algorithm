@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 import static com.cevier.algorithm.Tools.TestTools.arraySortFunctionTimeTester;
 
-
 //自下而上的归并排序
 public class MergeSort5 {
 
@@ -14,7 +13,6 @@ public class MergeSort5 {
         E[] temp = Arrays.copyOf(arr, arr.length);
         mergeSort(arr, 1, temp);
     }
-
 
     private static <E extends Comparable<E>> void mergeSort(E[] arr, int size, E[] temp){
         if(size >= arr.length)
@@ -30,7 +28,6 @@ public class MergeSort5 {
     }
 
     private static <E extends Comparable<E>> void merge(E[] arr, int l, int mid, int r, E[] temp){
-
         System.arraycopy(arr, l, temp, l, r - l + 1);
         int i = l, j = mid + 1;
         for(int k = l; k <= r; k++)
@@ -40,11 +37,9 @@ public class MergeSort5 {
                 arr[k] = temp[i++];
             else
                 arr[k] = temp[i].compareTo(temp[j]) <= 0 ? temp[i++] : temp[j++];
-
     }
 
     public static void main(String[] args) {
-
 //        for (int i = 0; i < 100; i++) {
 //            arraySortFunctionTimeTester(MergeSort5.class, "sort", i);
 //        }
