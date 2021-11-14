@@ -69,6 +69,8 @@ public class TestTools {
                 }
             }
 
+            System.out.println(c.getName().split("\\.")[c.getName().split("\\.").length - 1] + "\tsize: " + n);
+
             for (int i = 0; i < arrs.length; i++) {
                 Object a = arrs[i];
                 long t0 = System.nanoTime();
@@ -84,13 +86,13 @@ public class TestTools {
 
                 String r = "";
                 switch(i){
-                    case 0: r = "Random: " + (t1 - t0)/1000000.0 + "ms"; break;
-                    case 1: r = "Ordered: " + (t1 - t0)/1000000.0 + "ms"; break;
-                    case 2: r = "Inverse Order: " + (t1 - t0)/1000000.0 + "ms"; break;
+                    case 0: r = "  random: " + (t1 - t0)/1000000.0 + "ms"; break;
+                    case 1: r = "  ordered: " + (t1 - t0)/1000000.0 + "ms"; break;
+                    case 2: r = "  inverse order: " + (t1 - t0)/1000000.0 + "ms"; break;
                 }
                 System.out.println(r);
             }
-
+            System.out.println();
         } catch (Exception e) {
             System.out.println("timeTester: Test error.");
             e.printStackTrace();
