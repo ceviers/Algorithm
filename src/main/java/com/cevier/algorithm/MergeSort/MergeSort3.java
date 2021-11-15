@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import static com.cevier.algorithm.Tools.TestTools.arraySortFunctionTimeTester;
 
+//插入排序优化
 public class MergeSort3 {
     private MergeSort3(){}
 

@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import static com.cevier.algorithm.Tools.TestTools.arraySortFunctionTimeTester;
 
+//归并时数组不断创建优化
 public class MergeSort4 {
     private MergeSort4(){}
 

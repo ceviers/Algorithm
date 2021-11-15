@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 import static com.cevier.algorithm.Tools.TestTools.arraySortFunctionTimeTester;
 
+//有序数组优化
 public class MergeSort2 {
     private MergeSort2(){}
 
