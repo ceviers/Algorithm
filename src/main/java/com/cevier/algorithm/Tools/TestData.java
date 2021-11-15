@@ -30,4 +30,12 @@ public class TestData {
         }
         return arr;
     }
+
+    public static Integer[] sameValeArray(int n){
+        Integer[] arr = new Integer[n];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = 0;
+        }
+        return arr;
+    }
 }

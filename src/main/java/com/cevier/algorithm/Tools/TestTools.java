@@ -50,11 +50,12 @@ public class TestTools {
      */
     public static void arraySortFunctionTimeTester(Class c, String method, int n){
 
-        Integer[][] arrs = new Integer[3][n];
+        Integer[][] arrs = new Integer[4][n];
 
         arrs[0] = TestData.randomIntegerArray(n);
         arrs[1] = TestData.orderedIntegerArray(n);
         arrs[2] = TestData.inverseOrderedIntegerArray(n);
+        arrs[3] = TestData.sameValeArray(n);
 
         try {
             Constructor cons = c.getDeclaredConstructor();
@@ -79,7 +80,7 @@ public class TestTools {
 
                 for (int j = 1; j < arrs[i].length; j++) {
                     if(arrs[i][j - 1].compareTo(arrs[i][j]) > 0){
-                        System.err.println("======================排序出错!======================");
+                        System.out.println("======================排序出错!======================");
                         break;
                     }
                 }
@@ -89,6 +90,7 @@ public class TestTools {
                     case 0: r = "  random: " + (t1 - t0)/1000000.0 + "ms"; break;
                     case 1: r = "  ordered: " + (t1 - t0)/1000000.0 + "ms"; break;
                     case 2: r = "  inverse order: " + (t1 - t0)/1000000.0 + "ms"; break;
+                    case 3: r = "  same vales: " + (t1 - t0)/1000000.0 + "ms"; break;
                 }
                 System.out.println(r);
             }

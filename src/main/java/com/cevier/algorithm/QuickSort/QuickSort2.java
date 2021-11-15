@@ -6,8 +6,8 @@ import java.util.Random;
 
 import static com.cevier.algorithm.Tools.TestTools.arraySortFunctionTimeTester;
 
-public class QuickSort {
-    private QuickSort(){}
+public class QuickSort2 {
+    private QuickSort2(){}
 
     public static <E extends Comparable<E>> void sort(E[] arr){
         Random random = new Random();
@@ -25,10 +25,15 @@ public class QuickSort {
     private static <E extends Comparable<E>> int partition(E[] arr, int l, int r, Random random){
         int p = l + random.nextInt(r - l + 1);
         swap(arr, l, p);
-        p = l;
-        for(int i = l; i <= r; i++)
-            if(arr[l].compareTo(arr[i]) > 0)
-                swap(arr, ++p, i);
+
+        p = r;
+        int i = l + 1;
+        while(true){
+            while (i <= p && arr[i].compareTo(arr[l]) < 0) i++;
+            while (p >= i && arr[p].compareTo(arr[l]) > 0) p--;
+            if(i >= p) break;
+            swap(arr, i++, p--);
+        }
         swap(arr, l, p);
         return p;
     }
@@ -42,6 +47,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int n = 10000;
         arraySortFunctionTimeTester(QuickSort.class, "sort", n);
+        arraySortFunctionTimeTester(QuickSort2.class, "sort", n);
         arraySortFunctionTimeTester(MergeSort4.class, "sort", n);
     }
 }
