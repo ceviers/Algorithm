@@ -27,7 +27,7 @@ public class HeapSort2 {
         }
     }
 
-    private static <E extends Comparable<E>>void swap(E[] arr, int index1, int index2){
+    private static <E> void swap(E[] arr, int index1, int index2){
         E t = arr[index1];
         arr[index1] = arr[index2];
         arr[index2] = t;
