@@ -1,4 +1,4 @@
-package com.cevier.leetcode.SumOfTwoNumbers;
+package com.cevier.leetcode;
 
 import java.util.PriorityQueue;
 
