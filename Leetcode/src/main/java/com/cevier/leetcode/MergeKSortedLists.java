@@ -63,7 +63,7 @@ public class MergeKSortedLists {
 
     public static void main(String[] args) {
         ListNode node = new ListNode(1, new ListNode(2, new ListNode(3)));
-        ListNode[] a = new ListNode[1];
+        ListNode[] a = {node};
         a[0] = node;
         ListNode node1 = new MergeKSortedLists().mergeKLists(a);
     }
