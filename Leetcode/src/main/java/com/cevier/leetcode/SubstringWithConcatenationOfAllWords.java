@@ -24,15 +24,15 @@ public class SubstringWithConcatenationOfAllWords {
                 f.put(word, f.getOrDefault(word, 0) - 1);
             }
             for (int j = 0; j < l; j++) {
-                String seg = s.substring(i + j * n, i + (j +1 ) * n);
+                String seg = s.substring(i + j * n, i + (j + 1) * n);
                 f.put(seg, f.getOrDefault(seg, 0) + 1);
                 if (f.get(seg) == 0) {
                     f.remove(seg);
                 }
             }
-            for (int j = i; j <= s.length() - n; j += n) {
+            for (int j = i; j <= s.length() - l * n; j += n) {
                 if (i != j) {
-                    String seg = s.substring(j + (l - 1) * n, j + l * n);
+                    String seg = s.substring(j + l * n - n, j + l * n);
                     f.put(seg, f.getOrDefault(seg, 0) + 1);
                     if (f.get(seg) == 0) {
                         f.remove(seg);
